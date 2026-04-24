@@ -1,0 +1,9 @@
+.container { width: min(1180px, 86%); margin: 0 auto; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 20px; border-radius: 999px; font-weight: 800; transition: transform .2s ease; }
+.btn:hover { transform: translateY(-2px); }
+.btn-primary { background: linear-gradient(90deg,#38bdf8,#2dd4bf); color: #06111f; }
+.btn-secondary { border: 1px solid rgba(148,163,184,.34); color: #f8fafc; background: rgba(15,23,42,.75); }
+.card { padding: 26px; border-radius: 24px; background: rgba(15,23,42,.78); border: 1px solid rgba(148,163,184,.18); box-shadow: 0 24px 80px rgba(0,0,0,.18); }
+.section-title { max-width: 760px; margin-bottom: 38px; }
+.section-title h2 { margin: 10px 0 12px; font-size: clamp(2rem,4vw,3rem); line-height: 1.05; }
+.section-title p, .card p { color: #cbd5e1; line-height: 1.75; }
