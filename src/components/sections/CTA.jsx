@@ -5,7 +5,7 @@ import "./CTA.css";
 
 const CTA = () => {
   return (
-    <section className="cta-section">
+    <section className="cta-section final-cta">
       <Container>
         <div className="cta-box">
           <h2>Need a bid-ready advisory and digital delivery partner?</h2>

@@ -51,14 +51,11 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Hero from "./sections/Hero";
-import ServicesOverview from "./sections/ServicesOverview";
-import WhyChooseUs from "./sections/WhyChooseUs";
-import Process from "./sections/Process";
-import CaseStudies from "./sections/CaseStudies";
-import Testimonials from "./sections/Testimonials";
-import PricingPreview from "./sections/PricingPreview";
-import CTA from "./sections/CTA";
-import Contact from "./sections/Contact";
+import TrustBar from "./sections/TrustBar";
+import TwoPathways from "./sections/TwoPathways";
+import ThreeTierPipeline from "./sections/ThreeTierPipeline";
+import AgriScanCaseStudy from "./sections/AgriScanCaseStudy";
+import Solutions from "./sections/Solutions";
 import "../styles/Body.css";
 
 const Body = () => {
@@ -67,14 +64,11 @@ const Body = () => {
       <Header />
       <main className="body-main">
         <Hero />
-        <ServicesOverview />
-        <WhyChooseUs />
-        <Process />
-        <CaseStudies />
-        <Testimonials />
-        <PricingPreview />
-        <CTA />
-        <Contact />
+        <TrustBar />
+        <TwoPathways />
+        <ThreeTierPipeline />
+        <Solutions />
+        <AgriScanCaseStudy />
       </main>
       <Footer />
     </>

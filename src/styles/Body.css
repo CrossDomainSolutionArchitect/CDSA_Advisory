@@ -1,1 +1,3 @@
+/* Body styles now unified in Global.css */
+@import './Global.css';
 .body-main { width: 100%; }

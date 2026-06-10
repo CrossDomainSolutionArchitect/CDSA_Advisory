@@ -1,3 +1,5 @@
+/* Common styles now unified in Global.css */
+@import './Global.css';
 .container { width: min(1180px, 86%); margin: 0 auto; }
 .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 20px; border-radius: 999px; font-weight: 800; transition: transform .2s ease; }
 .btn:hover { transform: translateY(-2px); }

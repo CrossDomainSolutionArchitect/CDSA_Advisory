@@ -1,5 +1,7 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; font-family: Inter, Arial, Helvetica, sans-serif; background: #07111f; color: #f8fafc; }
+/* Index-level styles now come from the Global brand stylesheet */
+@import './styles/Global.css';
 a { color: inherit; text-decoration: none; }
 button, input, textarea { font-family: inherit; }

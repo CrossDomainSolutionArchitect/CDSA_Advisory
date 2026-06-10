@@ -1,0 +1,17 @@
+/* Imported global brand styles */
+@import '../../styles/Global.css';
+.section-compliance { background: #f8fafc; padding: 48px 0; }
+.compliance-shell { max-width: 1180px; margin: 0 auto; padding: 0 7%; display: flex; flex-direction: column; gap: 24px; }
+.compliance-intro { display: flex; flex-direction: column; gap: 14px; text-align: center; }
+.compliance-eyebrow { display: inline-flex; align-items: center; justify-content: center; padding: 0.8rem 1.2rem; border-radius: 999px; background: #e2e8f0; color: #0f172a; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+.compliance-copy { margin: 0 auto; max-width: 640px; color: #334155; font-size: 1rem; line-height: 1.8; }
+.compliance-logos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.compliance-logo-card { display: flex; align-items: flex-start; gap: 16px; padding: 24px; border-radius: 24px; background: #ffffff; border: 1px solid rgba(148,163,184,.18); box-shadow: 0 18px 40px rgba(15,23,42,.05); }
+.compliance-logo-mark { width: 48px; height: 48px; min-width: 48px; border-radius: 50%; display: grid; place-items: center; background: #f8fafc; color: #0f172a; font-size: 1.3rem; font-weight: 800; border: 1px solid rgba(56,189,248,.2); }
+.compliance-logo-text strong { display: block; color: #0f172a; font-size: 1rem; margin-bottom: 6px; }
+.compliance-logo-text span { display: block; color: #475569; line-height: 1.7; font-size: 0.95rem; }
+@media (max-width: 920px) { .compliance-logos { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .compliance-shell { padding: 0 4%; }
+  .compliance-logos { grid-template-columns: 1fr; }
+  .compliance-intro { text-align: left; }
+}

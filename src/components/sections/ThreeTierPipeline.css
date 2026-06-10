@@ -1,0 +1,22 @@
+/* Imported global brand styles */
+@import '../../styles/Global.css';
+.section-pipeline.b2b2c-flow { background: #ffffff; padding: 56px 0; color: inherit; border-radius: 0; }
+.section-pipeline.b2b2c-flow .pipeline-shell { max-width: 1180px; margin: 0 auto; padding: 0 7%; display: flex; flex-direction: column; gap: 18px; }
+.section-pipeline.b2b2c-flow .pipeline-header h2 { margin: 0; font-size: clamp(1.4rem, 2.2vw, 1.8rem); color: #0f172a; line-height: 1.05; }
+.section-pipeline.b2b2c-flow .pipeline-copy { margin: 6px 0 0; color: #475569; font-size: 0.98rem; line-height: 1.6; }
+.section-pipeline.b2b2c-flow .pipeline-flow { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 18px; }
+.section-pipeline.b2b2c-flow .pipeline-step { background: #ffffff; padding: 22px; border-radius: 20px; border: 1px solid rgba(15,23,42,.06); box-shadow: 0 12px 36px rgba(2,6,23,.04); display: flex; flex-direction: column; gap: 12px; min-height: 180px; }
+.section-pipeline.b2b2c-flow .pipeline-step-icon { width: 56px; height: 56px; display: grid; place-items: center; border-radius: 14px; background: rgba(99,102,241,.08); font-size: 1.5rem; }
+.section-pipeline.b2b2c-flow .pipeline-step h3 { margin: 0; font-size: 1.02rem; color: #0f172a; }
+.section-pipeline.b2b2c-flow .pipeline-step p { margin: 0; color: #475569; line-height: 1.6; font-size: 0.95rem; }
+.section-pipeline.b2b2c-flow .pipeline-arrow { text-align: center; }
+.section-pipeline.b2b2c-flow .pipeline-arrow .arrow { display: inline-flex; align-items: center; justify-content: center; font-size: 1.7rem; background: var(--brand-yellow); color: #111; padding: 0.4rem 0.8rem; border-radius: 999px; transform: translateY(-2px); }
+.section-pipeline.b2b2c-flow .pipeline-footer { text-align: center; margin-top: 6px; }
+.section-pipeline.b2b2c-flow .pipeline-footer p { margin: 0; color: #475569; font-weight: 600; }
+
+@media (max-width: 980px) { 
+	.pipeline-flow { grid-template-columns: 1fr; row-gap: 18px; }
+	.pipeline-arrow { display: none; }
+}
+
+@media (max-width: 920px) { .section-pipeline { padding: 40px 0; } .pipeline-shell { padding: 0 4%; } }

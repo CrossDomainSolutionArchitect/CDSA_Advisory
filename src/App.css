@@ -1,3 +1,5 @@
+/* App-level styles now come from the Global brand stylesheet */
+@import './styles/Global.css';
 .App {
   text-align: center;
 }

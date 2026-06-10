@@ -1,7 +1,6 @@
 import React from "react";
-import Container from "../Container";
 import Button from "../common/Button";
-import "./PricingPreview.css";
+import "./AgriScanCaseStudy.css";
 
 const WHATSAPP_NUMBER = "27673931524";
 const makeWhatsAppHref = (card) => {
@@ -10,19 +9,19 @@ const makeWhatsAppHref = (card) => {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
 };
 
-const cards = [
+const pricingCards = [
   {
     title: "Free",
     price: "R0/m",
     items: ["WhatsApp advice", "1 Virtual meeting"],
-    href: "https://cdsa.tech/",
+     href: "https://w./",
     cta: "Start free",
   },
   {
     title: "Starter",
     price: "R999/m",
     items: ["Website","Logo Design","Funding readiness"],
-    href: "https://cdsa.tech/",
+     href: "https://cdsa.tech/",
     cta: "Enrol now",
   },
   {
@@ -34,16 +33,16 @@ const cards = [
   },
 ];
 
-const PricingPreview = () => {
+const AgriScanCaseStudy = () => {
   return (
-    <section className="section section-pricing" id="pricing">
-      <Container>
-        <div className="pricing-header">
+    <section className="section section-price-overview section-pricing pricing" id="agriscan">
+      <div className="case-study-shell">
+        <div className="case-study-headline">
           <h2>Simple, transparent pricing for SMMEs. Partners: contact us for custom quotes.</h2>
         </div>
 
         <div className="pricing-grid">
-          {cards.map((card) => (
+          {pricingCards.map((card) => (
             <div key={card.title} className={`pricing-card ${card.title.toLowerCase()}`}>
               <div>
                 <h3>{card.title}</h3>
@@ -59,12 +58,12 @@ const PricingPreview = () => {
           ))}
         </div>
 
-        <div className="pricing-note">
+        <div className="case-study-note">
           <a href="https://cdsa.tech/" target="_blank" rel="noreferrer">For government & corporate programmes – request a tailored RFQ response →</a>
         </div>
-      </Container>
+      </div>
     </section>
   );
 };
 
-export default PricingPreview;
+export default AgriScanCaseStudy;

@@ -1,9 +1,165 @@
-.section { padding: 88px 0; }
-.section-muted { background: rgba(15, 23, 42, 0.58); }
-.grid { display: grid; gap: 24px; }
-.grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-.eyebrow { color: #38bdf8; text-transform: uppercase; font-size: .78rem; letter-spacing: .18em; font-weight: 800; }
-.gradient-text { background: linear-gradient(90deg,#38bdf8,#2dd4bf,#facc15); -webkit-background-clip: text; color: transparent; }
-@media (max-width: 900px) { .section { padding: 64px 0; } .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; } }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap');
+
+/* Colours */
+:root {
+	--brand-teal: #03ccac;
+	--brand-purple: #8669fb;
+	--brand-pink: #fc486b;
+	--brand-yellow: #f6ce17;
+
+	/* Typography */
+	--heading-font: 'Poppins', sans-serif;
+	--body-font: 'Inter', sans-serif;
+}
+
+/* Global resets and base styles */
+* { box-sizing: border-box; }
+html,body,#root { height:100%; }
+body {
+	margin: 0;
+	font-family: var(--body-font);
+	color: #111;
+	background: #ffffff;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+}
+
+/* Headings use the brand heading font and teal by default */
+h1,h2,h3,h4,h5,h6 { font-family: var(--heading-font); color: var(--brand-teal); margin:0 0 0.5rem 0; }
+
+/* Links */
+a { color: var(--brand-teal); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+.btn:hover {
+  transform: translateY(-1px);
+}
+.btn-primary {
+  background: var(--brand-teal);
+  color: white;
+  border: none;
+}
+.btn-smme { background: #fc486b; color: white; border: none; }
+.btn-partner { background: #8669fb; color: white; border: none; }
+.btn-secondary { background: transparent; border: 2px solid #03ccac; color: #03ccac; }
+
+/* Card hover effect */
+.card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,0,0,0.06); border-image: linear-gradient(90deg, #03ccac, #8669fb, #fc486b, #f6ce17) 1; }
+
+/* Utility classes for brand-coloured highlights */
+.brand-teal { color: var(--brand-teal); }
+.brand-purple { color: var(--brand-purple); }
+.brand-pink { color: var(--brand-pink); }
+.brand-yellow { color: var(--brand-yellow); }
+
+/* Section colour mapping utilities */
+.section-hero h1, .section-hero h2 { color: var(--brand-teal); }
+.section-hero .btn-smme { background: var(--brand-pink); }
+.section-hero .btn-partner { background: var(--brand-purple); }
+
+.audience-card { padding: 1.5rem; border-radius: 16px; color: white; }
+.audience-card.smm { background: var(--brand-pink); }
+.audience-card.partner { background: var(--brand-purple); }
+
+.b2b2c-flow { background: linear-gradient(90deg, #8669fb 0%, #03ccac 50%, #fc486b 100%); color: white; border-radius: 16px; padding: 1.5rem; }
+.b2b2c-flow .pipeline-step { background: rgba(255,255,255,0.08); border-radius: 12px; padding: 1rem; margin-bottom: 1rem; }
+.b2b2c-flow .pipeline-arrow { font-size: 2rem; margin: 0 1rem; color: white; }
+.b2b2c-flow .pipeline-arrow.end { background: var(--brand-yellow); color: #111; padding: 0.5rem 0.75rem; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center; }
+
+.solutions-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); }
+.solution-card { padding: 1.25rem; border-radius: 18px; min-height: 230px; }
+.solution-card.teal { background: var(--brand-teal); color: white; }
+.solution-card.purple { background: var(--brand-purple); color: white; }
+.solution-card.pink { background: var(--brand-pink); color: white; }
+.solution-card.yellow { background: var(--brand-yellow); color: #111; }
+.solutions-footer .solutions-all { display: inline-flex; align-items:center; gap:0.5rem; padding:0.75rem 1rem; border-radius:999px; background: var(--brand-yellow); color: #111; font-weight:700; text-decoration:none; }
+
+.social-proof { display:flex; flex-wrap:wrap; gap:1rem; }
+.social-proof .card, .trust-bar .trust-pill { border-radius: 14px; padding: 1rem; }
+.social-proof .card { background: rgba(3, 204, 172, 0.08); border: 1px solid rgba(3, 204, 172, 0.2); }
+.trust-pill { background: var(--brand-yellow); color: #111; }
+
+.section-pricing .pricing-card { border-radius: 18px; padding: 1.25rem; display:flex; flex-direction:column; justify-content:space-between; gap:1rem; }
+.section-pricing .pricing-card.free { background: var(--brand-yellow); color: #111; }
+.section-pricing .pricing-card.starter { background: rgba(3, 204, 172, 0.12); border: 1px solid rgba(3, 204, 172, 0.4); }
+.section-pricing .pricing-card.grow { background: rgba(134, 105, 251, 0.12); border: 1px solid rgba(134, 105, 251, 0.35); }
+.section-pricing .pricing-card h3 { margin-top: 0; }
+
+.final-cta { background: linear-gradient(90deg, #03ccac, #8669fb); color: white; padding: 2rem 1.5rem; border-radius: 24px; }
+.final-cta .btn { background: rgba(255,255,255,0.16); color: white; }
+
+.site-footer { background: #f3f4f6; color: #374151; padding: 2rem; }
+.site-footer a { color: var(--brand-teal); }
+.site-footer .whatsapp-link, .site-footer .whatsapp { background: var(--brand-pink); color: white; padding: 0.75rem 1rem; border-radius: 999px; display: inline-flex; align-items: center; text-decoration: none; }
+.site-footer .footer-logo-name { color: var(--brand-teal); }
+
+.header { background: white; border-bottom: 1px solid rgba(0,0,0,0.08); }
+.header .nav-link, .header .dropdown-link, .mobile-nav-list a { color: #111; }
+.header .whatsapp-float { background: var(--brand-pink); color: white; padding: 0.75rem 1rem; border-radius: 999px; text-decoration:none; }
+
+/* Footer, header, and common components can use these variables */
+.site-header { background: white; border-bottom: 1px solid rgba(0,0,0,0.06); }
+.site-nav a.active { color: var(--brand-teal); }
+
+/* Small responsive tweaks */
+@media (max-width: 600px) {
+	.btn-smme, .btn-partner, .btn-secondary { width: 100%; display: inline-block; text-align:center; }
+}
+
+/* Section colour mappings (per provided summary table) */
+
+/* Hero: Teal headlines; Pink + Purple buttons */
+.section-hero h1, .section-hero h2 { color: var(--brand-teal); }
+.section-hero .btn-smme { background: var(--brand-pink); }
+.section-hero .btn-partner { background: var(--brand-purple); }
+
+/* Audience cards: SMME = Pink, Partner = Purple */
+.audience-card.smm { background: var(--brand-pink); color: white; }
+.audience-card.partner { background: var(--brand-purple); color: white; }
+
+/* B2B2C Flow: gradient purple → teal → pink, arrow end highlighted with yellow */
+.b2b2c-flow { background: linear-gradient(90deg, #8669fb 0%, #03ccac 50%, #fc486b 100%); color: white; padding: 1rem; border-radius: 8px; }
+.b2b2c-flow .flow-arrow { display:inline-block; padding: 0.25rem 0.5rem; border-radius: 4px; background: linear-gradient(90deg,#8669fb,#03ccac,#fc486b); }
+.b2b2c-flow .flow-arrow.end { background: var(--brand-yellow); color: #111; }
+
+/* Solutions grid: allow one-colour utility per card */
+.solutions-grid .solution-card { padding: 1rem; border-radius: 8px; color: white; }
+.solutions-grid .solution-card.teal { background: var(--brand-teal); }
+.solutions-grid .solution-card.purple { background: var(--brand-purple); }
+.solutions-grid .solution-card.pink { background: var(--brand-pink); }
+.solutions-grid .solution-card.yellow { background: var(--brand-yellow); color: #111; }
+
+/* Social proof: Teal + Purple + Pink, yellow for badges */
+.social-proof { display:flex; gap:1rem; align-items:center; }
+.social-proof .logo { filter: none; }
+.social-proof .badge { background: var(--brand-yellow); color: #111; padding:0.25rem 0.5rem; border-radius:4px; }
+
+/* Pricing: Yellow = Free, Teal = Starter, Purple = Grow */
+.pricing .badge.free { background: var(--brand-yellow); color: #111; }
+.pricing .tier.starter { border: 2px solid var(--brand-teal); }
+.pricing .tier.grow { border: 2px solid var(--brand-purple); }
+
+/* Final CTA: gradient Teal → Purple */
+.final-cta { background: linear-gradient(90deg, #03ccac, #8669fb); color: white; padding:1rem 1.5rem; border-radius:8px; display:inline-block; }
+
+/* Footer: grey background with teal links; pink WhatsApp button */
+.site-footer { background: #f3f4f6; color: #374151; padding:2rem; }
+.site-footer a { color: var(--brand-teal); }
+.site-footer .whatsapp { background: var(--brand-pink); color: white; padding:0.5rem 0.75rem; border-radius:6px; display:inline-block; }
+
+/* Helper: enforce max 2 colours per section (utility) */
+.limit-two-colours * { color: inherit; }
+

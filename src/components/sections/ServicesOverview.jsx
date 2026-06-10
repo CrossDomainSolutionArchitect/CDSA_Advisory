@@ -12,7 +12,7 @@ const services = [
 
 const ServicesOverview = () => {
   return (
-    <section className="section section-muted services" id="services">
+    <section className="section section-muted services limit-two-colours" id="services">
       <Container>
         <SectionTitle eyebrow="What CDSA Delivers" title="Three focused service lines built for contracts, RFQs and impact." description="CDSA packages advisory, implementation and technical delivery into clear offers for government, corporate and SMME environments." />
         <div className="grid grid-3">{services.map((service) => <ServiceDetailCard key={service.number} {...service} />)}</div>

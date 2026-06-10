@@ -1,3 +1,5 @@
+/* Imported global brand styles */
+@import '../../styles/Global.css';
 .service-card h3 { font-size: 1.28rem; margin: 14px 0 12px; }
 .service-card p { color: #cbd5e1; line-height: 1.7; }
 .service-card ul { padding-left: 18px; color: #94a3b8; line-height: 1.9; }
