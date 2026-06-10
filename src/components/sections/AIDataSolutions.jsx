@@ -20,12 +20,12 @@ const AIDataSolutions = () => {
                 CDSA builds monitoring and reporting solutions for government, corporate and impact partners that need programme visibility, risk scoring and predictive planning.
               </p>
               <div className="ai-actions">
-                <a className="btn btn-primary disabled" href="#" aria-disabled="true">
+                <button className="btn btn-primary" type="button" disabled>
                   Request a demo dashboard
-                </a>
-                <a className="btn btn-secondary disabled" href="#" aria-disabled="true">
+                </button>
+                <button className="btn btn-secondary" type="button" disabled>
                   Download capability statement (PDF)
-                </a>
+                </button>
               </div>
             </div>
 
