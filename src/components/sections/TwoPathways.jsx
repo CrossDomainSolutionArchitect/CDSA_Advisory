@@ -1,37 +1,52 @@
 import React from "react";
+import { FaCheck } from "react-icons/fa";
 import "./TwoPathways.css";
 
 const TwoPathways = () => {
-  const PARTNER_EMAIL = "info@vcdsa.co.za";
-  const makePartnerMailto = () => {
-    const subject = `Request RFQ / Pilot — Partnership enquiry`;
-    const body = `Hello CDSA team,%0D%0A%0D%0AWe are interested in requesting an RFQ or pilot for a partnership. Please provide next steps and capability statement.%0D%0A%0D%0AOrganisation:%0D%0APrimary contact (name & role):%0D%0APhone:%0D%0AProgramme scope / notes:%0D%0A%0D%0AThanks,%0D%0A`;
-    return `mailto:${PARTNER_EMAIL}?subject=${encodeURIComponent(subject)}&body=${body}`;
-  };
+  const benefits = [
+    {
+      id: "contributor",
+      status: "Level 1 Contributor",
+      benefit: "135% B-BBEE procurement recognition on qualifying spend",
+      icon: "🎯",
+    },
+    {
+      id: "empowering",
+      status: "Empowering Supplier",
+      benefit: "Additional Preferential Procurement points beyond standard recognition",
+      icon: "⚡",
+    },
+    {
+      id: "youth",
+      status: "100%+ Youth Black Ownership",
+      benefit: "Maximum value for your targeted corporate compliance spend",
+      icon: "🚀",
+    },
+  ];
+
   return (
     <section className="section section-two-pathways" id="two-pathways">
       <div className="two-shell">
-        <div className="card audience-card smm">
-          <div className="card-icon">👥 💬</div>
-          <h3>You run a small business. We speak your language.</h3>
-          <ul>
-            <li>Free business advice via WhatsApp</li>
-            <li>Affordable websites & digital tools from R999/m</li>
-            <li>No data required – works on any phone</li>
-          </ul>
-          <a className="btn btn-smme" href="https://wa.me/27673931524" target="_blank" rel="noreferrer">Start on WhatsApp →</a>
+        <div className="pathways-header">
+          <h2>What This Means For Your Business</h2>
+          <p className="pathways-subhead">
+            Every Rand you spend with us drives economic transformation and maximizes your scorecard points.
+          </p>
         </div>
 
-        <div className="card audience-card partner">
-          <div className="card-icon">🏢 📊</div>
-          <h3>Fund SMME development. We handle delivery & reporting.</h3>
-          <ul>
-            <li>B-BBEE / NDP aligned programmes</li>
-            <li>Automated ESG & impact data</li>
-            <li>Pilot-ready infrastructure (AgriScan, etc.)</li>
-            <li>White-label reporting for your stakeholders</li>
-          </ul>
-          <a className="btn btn-partner" href={makePartnerMailto()}>Request RFQ or Pilot →</a>
+        <div className="benefits-grid">
+          {benefits.map((item) => (
+            <div key={item.id} className="benefit-card">
+              <div className="benefit-icon">{item.icon}</div>
+              <div className="benefit-status">{item.status}</div>
+              <div className="benefit-text">
+                <strong>Your Benefit:</strong> {item.benefit}
+              </div>
+              <div className="benefit-check">
+                <FaCheck size={16} />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

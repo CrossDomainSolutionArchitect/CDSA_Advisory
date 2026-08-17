@@ -1,72 +1,66 @@
 import React from "react";
+import { FaBriefcase, FaGlobe, FaClipboard } from "react-icons/fa";
 import "./Solutions.css";
 
-const Card = ({ title, subhead, price, note, href, cta }) => {
-  const isExternal = href?.startsWith("http");
-
-  return (
-    <div className="solution-card">
-      <div className="card-head">
-        <h3>{title}</h3>
-        {subhead && <p className="card-subhead">{subhead}</p>}
-      </div>
-      <div className="card-body">
-        {price && <div className="card-price">{price}</div>}
-        {note && <div className="card-note">{note}</div>}
-      </div>
-      <div className="card-actions">
-        <a
-          className="btn btn-primary"
-          href={href}
-          target={isExternal ? "_blank" : undefined}
-          rel={isExternal ? "noreferrer" : undefined}
-        >
-          {cta}
-        </a>
-      </div>
-    </div>
-  );
-};
+const pillars = [
+  {
+    id: "advisory",
+    icon: FaBriefcase,
+    title: "Business Advisory",
+    scorecard: "Enterprise & Supplier Development (ESD) 📈",
+    impact:
+      "We fast-track survivalist SMMEs into compliant, scalable, and sustainable corporate-ready suppliers.",
+    emoji: "💼",
+  },
+  {
+    id: "digital",
+    icon: FaGlobe,
+    title: "Digital Enablement",
+    scorecard: "Socio-Economic Development (SED) & ESG Metrics 🌐",
+    impact:
+      "We deploy low-cost digital assets and zero-data pipelines to bridge the technology gap for township entrepreneurs.",
+    emoji: "🌐",
+  },
+  {
+    id: "governance",
+    icon: FaClipboard,
+    title: "Project Management",
+    scorecard: "Responsible Governance & Audit Tracking 🛡️",
+    impact:
+      "We deliver full project oversight with clear data dashboards, giving you verified, audit-ready proof of your compliance impact.",
+    emoji: "🛡️",
+  },
+];
 
 const Solutions = () => {
   return (
     <section className="section section-solutions" id="solutions">
       <div className="solutions-shell">
         <div className="solutions-header">
-          <h2>Technology and advisory for every SMME need - built for low-connectivity environments.</h2>
+          <h2>Our Three-Pillar Impact Model</h2>
+          <p className="solutions-intro">
+            We turn your Enterprise and Supplier Development (ESD) and socio-economic contributions into structured, high-yield initiatives.
+          </p>
         </div>
 
-        <div className="solutions-grid">
-          <Card
-            className="solution-card teal"
-            title="Digital Enablement"
-            subhead="Websites, CRM, automation"
-            price="From R7,500 once-off"
-            note="Custom scoping"
-            href="/services/digital-enablement"
-            cta="Learn more →"
-          />
+        <div className="pillars-grid">
+          {pillars.map(({ id, title, scorecard, impact, emoji }) => (
+            <div key={id} className="pillar-card">
+              <div className="pillar-number">{pillars.indexOf(pillars.find((p) => p.id === id)) + 1}</div>
+              <div className="pillar-emoji">{emoji}</div>
+              <h3 className="pillar-title">{title}</h3>
 
-          <Card
-            className="solution-card purple"
-            title="AI & Data Solutions"
-            subhead="Dashboards, risk scoring, predictive analytics"
-            price="Custom scoping"
-            href="/services/ai-data-solutions"
-            cta="Learn more →"
-          />
+              <div className="pillar-section">
+                <strong className="pillar-label">The Scorecard Link:</strong>
+                <p className="pillar-text">{scorecard}</p>
+              </div>
 
-          <Card
-            className="solution-card pink"
-            title="Business Advisory"
-            subhead="Diagnostics, mentorship, funding readiness"
-            href="/services/business-advisory"
-            cta="Learn more →"
-          />
-        </div>
-
-        <div className="solutions-footer">
-          <a className="solutions-all yellow" href="https://cdsa.tech/" target="_blank" rel="noreferrer">📱 Explore all our tech products →</a>
+              <div className="pillar-section">
+                <strong className="pillar-label">The Impact:</strong>
+                <p className="pillar-text">{impact}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

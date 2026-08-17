@@ -1,8 +1,7 @@
 import React from "react";
 import Container from "../Container";
 import Button from "../common/Button";
-import analyticsImage from "../../images/i_boredroom.jpg";
-import traderImage from "../../images/township_econ.jpg";
+import heroImage from "../../images/IS2000-B-beee.png";
 import "./Hero.css";
 
 const Hero = () => {
@@ -18,21 +17,18 @@ const Hero = () => {
         <div className="hero-split">
           <div className="hero-panel hero-panel-left">
             <div className="hero-copy">
-              <h1>We connect corporate funding to SMME growth - without requiring data or smartphones.</h1>
-              <p className="hero-subhead">Enterprise-ready compliance. Township-first tools. One platform.</p>
-
-              <div className="hero-actions">
-                <Button href="https://wa.me/27673931524" target="_blank" variant="smme">I'm an SMME - Get free help</Button>
-                <Button href={makePartnerMailto()} variant="partner">I'm a partner - Fund SMME programmes</Button>
-              </div>
+              <h1>Secure 135% B-BBEE procurement value through measurable social impact.</h1>
+              <p className="hero-subhead">
+                CDSA helps corporates strengthen their B-BBEE scorecard while unlocking sustainable growth for SMMEs.
+                As a Level 1 B-BBEE Empowering Supplier, we connect strategic funding, compliance, and business enablement
+                to deliver verified, audit-ready outcomes that support both transformation and long-term enterprise value.
+              </p>
             </div>
           </div>
 
           <div className="hero-panel hero-panel-right">
-            <div className="visual-composite">
-              <div className="composite-top"><img src={analyticsImage} alt="Corporate dashboard"/></div>
-              <div className="composite-bottom"><img src={traderImage} alt="Township entrepreneur"/></div>
-              <div className="bridge">CDSA</div>
+            <div className="hero-visual-single">
+              <img src={heroImage} alt="CDSA B-BBEE certification" />
             </div>
           </div>
         </div>
