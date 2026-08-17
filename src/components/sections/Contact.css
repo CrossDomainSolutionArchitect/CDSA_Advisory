@@ -1,3 +1,69 @@
 /* Imported global brand styles */
 @import '../../styles/Global.css';
-.contact-list { color: #cbd5e1; line-height: 1.9; padding-left: 18px; }
+
+.contact-list { 
+  color: #cbd5e1; 
+  line-height: 1.9; 
+  padding-left: 18px; 
+}
+
+/* New Form Styles */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #cbd5e1; /* Matched to your list text color */
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.6rem;
+  border: 1px solid #475569; /* Balanced dark theme border */
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.05); /* Slight tint for dark mode cards */
+  color: #fff;
+  font-size: 0.95rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #64748b;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #38bdf8; /* Highlight accent on focus */
+}
+
+.contact-submit-btn {
+  padding: 0.7rem 1.5rem;
+  background-color: #38bdf8; /* Standard bright digital/tech brand blue */
+  color: #0f172a; /* Dark text for contrast */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.95rem;
+  align-self: flex-start;
+  transition: opacity 0.2s ease;
+}
+
+.contact-submit-btn:hover {
+  opacity: 0.9;
+}
