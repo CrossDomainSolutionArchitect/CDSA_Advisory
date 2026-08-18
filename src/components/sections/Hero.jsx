@@ -1,16 +1,9 @@
 import React from "react";
 import Container from "../Container";
-import Button from "../common/Button";
 import heroImage from "../../images/IS2000-B-beee.png";
 import "./Hero.css";
 
 const Hero = () => {
-  const PARTNER_EMAIL = "info@vcdsa.co.za";
-  const makePartnerMailto = () => {
-    const subject = `Partnership enquiry — Fund SMME programmes`;
-    const body = `Hello CDSA team,%0D%0A%0D%0AI am contacting you about funding SMME programmes and would like to discuss partnership opportunities.%0D%0A%0D%0AOrganisation:%0D%0APrimary contact (name & role):%0D%0APhone:%0D%0AKey goals / notes:%0D%0A%0D%0AThanks,%0D%0A`;
-    return `mailto:${PARTNER_EMAIL}?subject=${encodeURIComponent(subject)}&body=${body}`;
-  };
   return (
     <section className="hero section-hero" id="home">
       <Container className="hero-wrapper">
