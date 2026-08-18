@@ -1,13 +1,33 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./ContactModal.css";
 
 const ContactModal = ({ isOpen, onClose }) => {
+  const formRef = useRef(null);
+
   if (!isOpen) return null;
 
   const handleBackdropClick = (e) => {
     if (e.target === e.currentTarget) {
       onClose();
     }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Get form values
+    const name = formRef.current.querySelector("#modal-name").value;
+    const phone = formRef.current.querySelector("#modal-phone").value;
+    const email = formRef.current.querySelector("#modal-email").value;
+    const message = formRef.current.querySelector("#modal-message").value;
+
+    // Build mailto URL with pre-filled data
+    const subject = "Contact Inquiry from CDSA Website";
+    const body = `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\n\nMessage:\n${message}`;
+    const mailtoUrl = `mailto:info@vcdsa.co.za?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    // Open email client
+    window.location.href = mailtoUrl;
   };
 
   return (
@@ -22,7 +42,7 @@ const ContactModal = ({ isOpen, onClose }) => {
           Reach out for capability statements, advisory packages, digital enablement pilots delivery partnerships.
         </p>
 
-        <form action="https://formspree.io/f/mrbynzaq" method="POST" className="contact-form">
+        <form ref={formRef} onSubmit={handleSubmit} className="contact-form">
           <div className="form-group">
             <label htmlFor="modal-name">Full Name</label>
             <input 
