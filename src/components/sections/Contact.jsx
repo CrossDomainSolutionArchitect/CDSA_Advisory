@@ -26,7 +26,7 @@ const Contact = () => {
               <li>SMME advisory and digital enablement</li>
               <li>Government programme implementation</li>
               <li>AI/data dashboards and monitoring systems</li>
-              <li>AgriScan pilot or agriculture innovation partnerships</li>
+              <li>Innovation partnerships</li>
             </ul>
           </Card>
 

@@ -22,6 +22,14 @@
   border-radius: 999px;
   box-shadow: 0 12px 25px rgba(17, 24, 39, 0.16);
   transition: transform 0.2s ease, background 0.2s ease;
+  font-size: .92rem;
+  font-weight: 700;
+}
+.nav-link.contact-link,
+button.nav-link.contact-link {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 .contact-link:hover { color: #ffffff; background: #1f2937; transform: translateY(-1px); }
 .nav-mobile { display: none; position: relative; }
@@ -62,6 +70,12 @@
   padding: 0.7rem 1rem;
   border-radius: 999px;
   width: fit-content;
+}
+button.mobile-contact-link {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
 }
 
 /* WhatsApp CTA */
