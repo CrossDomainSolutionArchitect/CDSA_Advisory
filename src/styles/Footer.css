@@ -107,6 +107,61 @@
 .footer-notice p {
   margin: 0;
 }
+
+.footer-contact-info,
+.footer-legal {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-contact-info h5,
+.footer-legal h5 {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #111827;
+}
+
+.footer-contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-contact-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.95rem;
+}
+
+.footer-contact-list a {
+  color: #03ccac;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.footer-contact-list a:hover {
+  color: #00a88a;
+}
+
+.footer-legal a {
+  color: #03ccac;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-legal a:hover {
+  color: #00a88a;
+}
+
 @media (max-width: 900px) {
   .footer-inner {
     grid-template-columns: 1fr;
